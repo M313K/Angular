@@ -1,0 +1,85 @@
+
+  <div class="row" style="margin: 8px;">
+    <div class="column" style="background-color:#aaa;">
+      <app-description></app-description>
+      
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 text-left">
+            <button class="btn btn-dark" style="margin: 1px;" (click)="changeTheme()">
+              <i class="fa fa-moon-o"></i>
+            </button>
+          </div>
+          <div class="col-6 text-right">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" style="margin: 1px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{submission.language}}
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" (click)="setLanguage('cpp')">c++</a></li>
+                <li><a class="dropdown-item" (click)="setLanguage('java')">java</a></li>
+                <li><a class="dropdown-item" (click)="setLanguage('python')">python</a></li>
+                <li><a class="dropdown-item" (click)="setLanguage('javascript')">javascript</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div
+        class="app-ace-editor"
+        #editor
+        style="width: 100%;">
+      </div>
+      
+      
+      
+    </div>
+  </div>
+  <div class="row" style="margin: 8px;">
+    <div class="column" style="background-color:#aaa;">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-auto">
+            <label for="exampleFormControlTextarea1">Standard Input</label>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-warning float-end" style="margin: 5px;" (click)="ExecuteCode()">Execute</button>
+          </div>
+        </div>
+        <textarea class="form-control" [(ngModel)]="stdin" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      
+      <div class="section">
+        <div class="problem-section">
+          <div class="row">
+            <div class="col-auto">
+              <label for="exampleFormControlTextarea1">Output</label>
+            </div>
+            <div class="col">
+              <button type="button" style="margin: 5px;" class="btn btn-success float-end" (click)="SubmitCode()">Submite</button>
+            </div>
+          </div>
+          <div class="scrollable-div">
+          <div class="problem-text">
+            <pre>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Nulla vehicula, mauris eget viverra viverra, erat erat commodo tortor,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Nulla vehicula, mauris eget viverra viverra, erat erat commodo tortor,
+      
+              </pre>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  

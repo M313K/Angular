@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .scrollable-div {
+    height: 80px; /* Adjust the height as needed */
+    overflow: auto;
+  }
+  .problem-section {
+    margin-top: 0px;
+  }
+  
+  .problem-text {
+    background-color: #f5f5f5;
+    padding: 0px;
+    border-radius: 5px;
+    font-family: monospace;
+  }
+  
+  .problem-text pre {
+    margin: 0;
+  }
+
+  

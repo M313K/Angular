@@ -1,0 +1,25 @@
+.scrollable-div {
+    height: 512px; /* Adjust the height as needed */
+    overflow: auto;
+  }
+  .problem-section {
+    margin-top: 20px;
+  }
+  
+  .problem-text {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+  }
+  
+  .problem-text pre {
+    margin: 0;
+  }
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
