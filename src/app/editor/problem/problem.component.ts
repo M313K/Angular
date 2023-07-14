@@ -14,8 +14,8 @@ export class ProblemComponent implements AfterViewInit {
   @ViewChild("editor")
   private editor!: ElementRef<HTMLElement>;
   private aceEditor!: ace.Ace.Editor;
-  submission:Submission={language:"cpp",script:"",problemId:"1"};
-  execution:Execution={language:"cpp",script:"",stdInput:"",problemId:"1"};
+  submission:Submission={idSubmission:"Main",idProblem:1,script:"",language:"cpp"};
+  execution:Execution={script:"",language:"cpp",testcase:"",idSubmission:"Main",memLimit:"512000000"};
   stdin:string="";
   @Output() SubmissionListener = new EventEmitter<Submission>();
   @Output() ExecutionListener = new EventEmitter<Execution>();
@@ -84,7 +84,7 @@ export class ProblemComponent implements AfterViewInit {
   ExecuteCode(){
     
     this.execution.script=this.aceEditor.getValue()
-    this.execution.stdInput=this.stdin;
+    this.execution.testcase=this.stdin;
     this.ExecutionListener.emit(this.execution)
     //console.log(this.execution)
   }

@@ -1,5 +1,6 @@
 export interface Submission {
-    language: string;
+    idSubmission:String;
+    idProblem:number;
     script:string;
-    problemId:String;
+    language: string;
   }

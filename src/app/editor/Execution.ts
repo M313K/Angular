@@ -1,6 +1,7 @@
 export interface Execution {
-    language: string;
     script:string;
-    stdInput:string;
-    problemId:String;
+    language: string;
+    testcase:string;
+    idSubmission:String;
+    memLimit:String;
   }

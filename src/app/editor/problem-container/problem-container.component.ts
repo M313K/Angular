@@ -12,16 +12,17 @@ export class ProblemContainerComponent {
   constructor(private editorService:EditorService){}
   Execute(execution:Execution){
       console.log(execution);
-      this.editorService.Execute(execution);/*.subscribe((res) => {
+      this.editorService.Execute(execution).subscribe((res) => {
+        console.log(res)
       },
       (err) => (console.log(err))
-      );*/
+      );
   }
   Submit(submission:Submission){
       console.log(submission);
-      this.editorService.Submite(submission);/*.subscribe((res) => {
+      this.editorService.Submite(submission).subscribe((res) => {
       },
       (err) => (console.log(err))
-      );*/
+      );
   }
 }
